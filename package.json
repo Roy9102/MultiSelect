@@ -1,0 +1,57 @@
+{
+    "name": "MultipleSelect",
+    "version": "0.0.1",
+    "description": "MultipleSelect ui component for react",
+    "keywords": [
+        "react",
+        "react-component",
+        "react-MultipleSelect",
+        "MultipleSelect"
+    ],
+    "author": "Roy",
+    "files": [
+        "lib",
+        "assets/*.css"
+    ],
+    "licenses": "MIT",
+    "publishConfig": {
+        "registry": "http://github.com/Roy9102"
+    },
+    "main": "./lib/index",
+    "scripts": {
+        "start": "WEBPACK_DEV=true  webpack-dev-server --hot --inline --port 3000 --profile  --color --progress",
+        "public": "WEBPACK_DEV=false webpack --profile  --color --progress",
+        "test": "test"
+    },
+    "pre-commit": [
+        "lint"
+    ],
+    "dependencies": {
+        "babel-core": "^6.18.2",
+        "babel-loader": "^6.2.7",
+        "babel-plugin-syntax-jsx": "^6.18.0",
+        "babel-plugin-transform-class-properties": "^6.18.0",
+        "babel-preset-es2015": "^6.18.0",
+        "babel-preset-react": "^6.16.0",
+        "babel-preset-stage-0": "^6.16.0",
+        "classnames": "^2.2.5",
+        "css-loader": "^0.25.0",
+        "eslint": "^3.10.0",
+        "eslint-config-airbnb": "^13.0.0",
+        "eslint-loader": "^1.6.1",
+        "eslint-plugin-react": "^6.6.0",
+        "extract-text-webpack-plugin": "^1.0.1",
+        "file-loader": "^0.9.0",
+        "json-loader": "^0.5.4",
+        "less": "^2.7.1",
+        "less-loader": "^2.2.3",
+        "react": "^15.3.2",
+        "react-addons-css-transition-group": "^15.3.2",
+        "react-addons-test-utils": "^15.3.2",
+        "react-dom": "^15.3.2",
+        "style-loader": "^0.13.1",
+        "url-loader": "^0.5.7",
+        "webpack": "^1.13.3",
+        "webpack-dev-server": "^1.16.2"
+    }
+}
