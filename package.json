@@ -1,6 +1,6 @@
 {
-    "name": "MultipleSelect",
-    "version": "0.0.1",
+    "name": "react-multiple-select",
+    "version": "0.0.2",
     "description": "MultipleSelect ui component for react",
     "keywords": [
         "react",
@@ -15,7 +15,7 @@
     ],
     "licenses": "MIT",
     "publishConfig": {
-        "registry": "http://github.com/Roy9102"
+        "registry": "http://github.com/Roy9102/MultipleSelect"
     },
     "main": "./lib/index",
     "scripts": {
