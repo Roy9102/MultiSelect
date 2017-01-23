@@ -1,5 +1,5 @@
 
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import ClickOutside from 'react-clickoutside-compoent';
 
 export default class MultipleSelect extends Component {
@@ -50,8 +50,10 @@ export default class MultipleSelect extends Component {
 	getSelectDesc(){
 		const { defaultValue } = this.props;
 		if ("" === defaultValue || 'string' !== typeof defaultValue) return '';
-		console.log(defaultValue.split(',').map( (val, index) => this.optionMap[val] && this.optionMap[val].text))
-		return defaultValue.split(',').map( (val, index) => this.optionMap[val] && this.optionMap[val].text).filter(desc => desc).join(',');
+		
+		return defaultValue.split(',')
+			.map( (val, index) => this.optionMap[val] && this.optionMap[val].text)
+			.filter(desc => desc).join(',');
 	}
 
 	showOptions(active){
@@ -80,4 +82,15 @@ export default class MultipleSelect extends Component {
 
 		)
 	}
+}
+
+MultipleSelect.defaultProps = {
+	multiple: true,
+	defaultValue: ''
+}
+
+MultipleSelect.propTypes = {
+	multiple: PropTypes.bool,
+	defaultValue: PropTypes.string,
+	onChange: PropTypes.func.isRequired
 }
