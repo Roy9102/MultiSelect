@@ -23,9 +23,9 @@ class Demo extends React.Component {
 
 	handleChange( value ){
 		const valueList = this.state.value.split(',');
+		console.log(valueList)
 		const pos       = valueList.indexOf(value);
 		if ( pos > -1){
-
 			this.setState({
 				value :[
 						...valueList.slice(0, pos),
@@ -33,7 +33,6 @@ class Demo extends React.Component {
 					].join(',')
 			})
 		}else{
-
 			this.setState({
 				value: [
 					...valueList,
@@ -46,7 +45,6 @@ class Demo extends React.Component {
 
 	render(){
 		const value = this.state.value;
-		console.log(value)
 		return (
 			<MultipleSelect onChange = { this.handleChange } multiple = {true} defaultValue = {value}>
 				<Option value = "A" >optionA</Option>

@@ -45,37 +45,17 @@ module.exports = {
         alias: {}
     },
     module:{
-        preLoaders: [
-            
-                    {
-                        extensions: 'js',
-                        test:       /\.(js)(\?.*)?$/,
-                        loader:     'eslint-loader',
-                        exclude:    /node_modules/
-                    },
-            
-                    {
-                        extensions: 'jsx',
-                        test:       /\.(jsx)(\?.*)?$/,
-                        loader:     'eslint-loader',
-                        exclude:    /node_modules/
-                    },
-            
-        ],
     	loaders: [
             
         			{
-        				extensions: 'jsx',
         				test:   	/\.(jsx)(\?.*)?$/,
-        				loader: 	'babel-loader',
+        				loader: 	'babel',
                         exclude:    /node_modules/
         			},
         	
         			{
-        				extensions: 'js',
         				test:   	/\.(js)(\?.*)?$/,
-        				loader: 	'babel-loader',
-                        exclude:    /node_modules/
+        				loader: 	'babel',
         			},
         	
         			{

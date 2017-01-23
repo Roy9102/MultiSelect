@@ -1,7 +1,6 @@
 
-
 import React, { Component } from 'react';
-
+import ClickOutside from 'react-clickoutside-compoent';
 
 export default class MultipleSelect extends Component {
 
@@ -43,7 +42,6 @@ export default class MultipleSelect extends Component {
 	shouldComponentUpdate(nextProps, nextState){
 		if ( nextProps.defaultValue === this.props.defaultValue
 			&& nextState.active === this.state.active ){
-			
 			return false;
 		}
 		return true;
@@ -51,13 +49,14 @@ export default class MultipleSelect extends Component {
 
 	getSelectDesc(){
 		const { defaultValue } = this.props;
-		if ("" === defaultValue) return '';
-		return defaultValue.split(',').map( (val, index) => this.optionMap[val] && this.optionMap[val].text).join(',');
+		if ("" === defaultValue || 'string' !== typeof defaultValue) return '';
+		console.log(defaultValue.split(',').map( (val, index) => this.optionMap[val] && this.optionMap[val].text))
+		return defaultValue.split(',').map( (val, index) => this.optionMap[val] && this.optionMap[val].text).filter(desc => desc).join(',');
 	}
 
-	showOptions(){
+	showOptions(active){
 		this.setState({
-			active: !this.state.active
+			active
 		})
 	}
 
@@ -66,8 +65,8 @@ export default class MultipleSelect extends Component {
 		const { active } = this.state;
 		const text = this.getSelectDesc();
 		return(
-			<div className = "multiple-select">
-				<div onClick = {this.showOptions} className = "select-area">
+			<ClickOutside handleOutsideClick = {() => this.showOptions(false)} className = "multiple-select">
+				<div onClick = {() => this.showOptions(!active)} className = "select-area">
 					<p className = "select-value">{text}</p>
 					<span className = {`select-btn ${active ? 'down' : 'up'}`}></span>
 				</div>
@@ -77,7 +76,7 @@ export default class MultipleSelect extends Component {
 						{this.childrenWithProps}
 					</div> : null
 				}
-			</div>
+			</ClickOutside>
 
 		)
 	}
