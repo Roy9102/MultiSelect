@@ -15,11 +15,11 @@
     ],
     "licenses": "MIT",
     "publishConfig": {
-        "registry": "http://github.com/Roy9102/MultipleSelect"
+        "registry": "https://github.com/Roy9102/MultipleSelect"
     },
     "repository": {
         "type": "git",
-        "url": "http://github.com/Roy9102/MultipleSelect"
+        "url": "https://github.com/Roy9102/MultiSelect"
     },
     "main": "./lib/index",
     "scripts": {
