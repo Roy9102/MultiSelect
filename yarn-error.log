@@ -15,8 +15,8 @@ Platform:
 
 npm manifest: 
   {
-      "name": "multiple-select",
-      "version": "0.0.3",
+      "name": "react-multiple-select",
+      "version": "0.0.2",
       "description": "MultipleSelect ui component for react",
       "keywords": [
           "react",
@@ -31,7 +31,7 @@ npm manifest:
       ],
       "licenses": "MIT",
       "publishConfig": {
-          "registry": "http://github.com/Roy9102"
+          "registry": "http://github.com/Roy9102/MultipleSelect"
       },
       "main": "./lib/index",
       "scripts": {
@@ -43,6 +43,11 @@ npm manifest:
           "lint"
       ],
       "dependencies": {
+          "react": "^15.3.2",
+          "react-clickoutside-compoent": "^1.0.1",
+          "react-dom": "^15.3.2"
+      },
+      "devDependencies": {
           "babel-core": "^6.18.2",
           "babel-loader": "^6.2.7",
           "babel-plugin-syntax-jsx": "^6.18.0",
@@ -62,11 +67,6 @@ npm manifest:
           "json-loader": "^0.5.4",
           "less": "^2.7.1",
           "less-loader": "^2.2.3",
-          "react": "^15.3.2",
-          "react-addons-css-transition-group": "^15.3.2",
-          "react-addons-test-utils": "^15.3.2",
-          "react-clickoutside-compoent": "^1.0.1",
-          "react-dom": "^15.3.2",
           "style-loader": "^0.13.1",
           "url-loader": "^0.5.7",
           "webpack": "^1.13.3",
@@ -4115,7 +4115,7 @@ Lockfile:
       window-size "0.1.0"
 
 Trace: 
-  Error: http://registry.npmjs.org/multiple-select: you do not have permission to publish "multiple-select". Are you logged in as the correct user?
+  Error: http://registry.npmjs.org/react-multiple-select: "You cannot publish over the previously published version 0.0.2."
       at Request.params.callback [as _callback] (/Users/Roy/.nvm/versions/node/v6.1.0/lib/node_modules/yarn/lib/util/request-manager.js:307:18)
       at Request.self.callback (/Users/Roy/.nvm/versions/node/v6.1.0/lib/node_modules/yarn/node_modules/request/request.js:186:22)
       at emitTwo (events.js:106:13)

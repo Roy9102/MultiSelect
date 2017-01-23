@@ -17,6 +17,10 @@
     "publishConfig": {
         "registry": "http://github.com/Roy9102/MultipleSelect"
     },
+    "repository": {
+        "type": "git",
+        "url": "http://github.com/Roy9102/MultipleSelect"
+    },
     "main": "./lib/index",
     "scripts": {
         "start": "WEBPACK_DEV=true  webpack-dev-server --hot --inline --port 3000 --profile  --color --progress",
